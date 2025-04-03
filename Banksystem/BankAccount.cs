@@ -30,7 +30,7 @@ namespace Banksystem
         {
             Console.WriteLine("Account Number : " + this.Accountnumber);
             Console.WriteLine("Account Holder Name : " + this.Accountholdername);
-            Console.WriteLine("Balance : " + this.Balance);
+            Console.WriteLine("Balance : " + this.Balance.ToString("F2"));
         }
 
         //สร้าง method สำหรับฝากเงิน
@@ -39,7 +39,7 @@ namespace Banksystem
             if (amount > 0 && (amount%100)==0)
             {
                 Balance = this.Balance + amount;
-                Console.WriteLine("Deposit Amount : " + amount + " Available Balance : " + Balance);
+                Console.WriteLine("Deposit Amount : " + amount.ToString("F2") + " Available Balance : " + Balance.ToString("F2"));
             }
             else
             {
@@ -53,7 +53,7 @@ namespace Banksystem
             if (amount > 0 && Balance>amount && (amount % 100) == 0)
             {
                 Balance = Balance - amount;
-                Console.WriteLine("Withdrawal Amount : " + amount + " Available Balance : " + Balance);
+                Console.WriteLine("Withdrawal Amount : " + amount.ToString("F2") + " Available Balance : " + Balance.ToString("F2"));
             }
             else
             {
@@ -68,7 +68,7 @@ namespace Banksystem
             if (amount > 0 && Balance > amount)
             {
                 Balance = Balance - amount;
-                Console.WriteLine("Transfer Amount : " + amount + "  Available Balance : " + Balance);
+                Console.WriteLine("Transfer Amount : " + amount.ToString("F2") + "  Available Balance : " + Balance.ToString("F2"));
                 toAccount.Balance = toAccount.Balance + amount;
                 Console.WriteLine("Tranfer to " + toAccount.Accountholdername);
             }
