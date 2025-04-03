@@ -35,9 +35,9 @@ do
                 Console.WriteLine("Account Name : " + ac1.Accountholdername);
 
                 //รับจำนวนเงินที่จะทำการฝากเงิน
-                int money;
+                decimal money;
                 Console.Write("Please enter the amount to deposit : ");
-                int.TryParse(Console.ReadLine(), out money);
+                decimal.TryParse(Console.ReadLine(), out money);
                 //ไปเรียกใช้ method ฝากเงิน
                 ac1.deposit(money);
             }
@@ -47,9 +47,9 @@ do
                 Console.WriteLine("Account Name : " + ac2.Accountholdername);
 
                 //รับจำนวนเงินที่จะทำการฝากเงิน
-                int money;
+                decimal money;
                 Console.Write("Please enter the amount to deposit : ");
-                int.TryParse(Console.ReadLine(), out money);
+                decimal.TryParse(Console.ReadLine(), out money);
                 //ไปเรียกใช้ method ฝากเงิน
                 ac2.deposit(money);
             }
@@ -71,9 +71,9 @@ do
                 Console.WriteLine("Account Name : " + ac1.Accountholdername);
 
                 //รับจำนวนเงินที่จะทำการฝากเงิน
-                int money;
+                decimal money;
                 Console.Write("Please Enter your money to Withdraw : ");
-                int.TryParse(Console.ReadLine(), out money);
+                decimal.TryParse(Console.ReadLine(), out money);
                 //ไปเรียกใช้ method ฝากเงิน
                 ac1.withdraw(money);
             }
@@ -83,9 +83,9 @@ do
                 Console.WriteLine("Account Name : " + ac2.Accountholdername);
 
                 //รับจำนวนเงินที่จะทำการฝากเงิน
-                int money;
+                decimal money;
                 Console.Write("Please Enter your money to Withdraw : ");
-                int.TryParse(Console.ReadLine(), out money);
+                decimal.TryParse(Console.ReadLine(), out money);
                 //ไปเรียกใช้ method ฝากเงิน
                 ac2.withdraw(money);
             }
