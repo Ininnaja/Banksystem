@@ -28,9 +28,9 @@ namespace Banksystem
         //สร้าง method แสดงข้อมูลของแต่ละบช.
         public void showDetailAccount()
         {
-            Console.WriteLine("Account Number = " + this.Accountnumber);
-            Console.WriteLine("Account Holder Name = " + this.Accountholdername);
-            Console.WriteLine("Balance = " + this.Balance);
+            Console.WriteLine("Account Number : " + this.Accountnumber);
+            Console.WriteLine("Account Holder Name : " + this.Accountholdername);
+            Console.WriteLine("Balance : " + this.Balance);
         }
 
         //สร้าง method สำหรับฝากเงิน
@@ -39,11 +39,11 @@ namespace Banksystem
             if (amount > 0 && (amount%100)==0)
             {
                 Balance = this.Balance + amount;
-                Console.WriteLine("Deposit : " + amount + " Balance : " + Balance);
+                Console.WriteLine("Deposit Amount : " + amount + " Available Balance : " + Balance);
             }
             else
             {
-                Console.WriteLine("Try again");
+                Console.WriteLine("Invalid amount.  \r\nDeposits must be in denominations of 100, 500, 1000, etc.  \r\nPlease try again");
             }
         }
 
@@ -53,11 +53,11 @@ namespace Banksystem
             if (amount > 0 && Balance>amount && (amount % 100) == 0)
             {
                 Balance = Balance - amount;
-                Console.WriteLine("ถอนเงินจำนวน : " + amount + "ยอดเงินคงเหลือ : " + Balance);
+                Console.WriteLine("Withdrawal Amount : " + amount + " Available Balance : " + Balance);
             }
             else
             {
-                Console.WriteLine("Try again ");
+                Console.WriteLine("Invalid amount.  \r\nWithdrawals must be in denominations of 100, 200, 500, etc.  \r\nPlease try again.");
             }
             
         }
@@ -68,13 +68,13 @@ namespace Banksystem
             if (amount > 0 && Balance > amount)
             {
                 Balance = Balance - amount;
-                Console.WriteLine("Transfer : " + amount + "  Balance : " + Balance);
+                Console.WriteLine("Transfer Amount : " + amount + "  Available Balance : " + Balance);
                 toAccount.Balance = toAccount.Balance + amount;
                 Console.WriteLine("Tranfer to " + toAccount.Accountholdername);
             }
             else
             {
-                Console.WriteLine("error to transfer");
+                Console.WriteLine("Transfer failed.  \r\nAn error occurred while processing your transaction.  \r\nPlease try again later.");
             }
         }
 
